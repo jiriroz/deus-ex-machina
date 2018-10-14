@@ -12,12 +12,14 @@
         crossorigin="anonymous">
 
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}"> {% if title %}
-
+    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+    
+    {% if title %}
     <title> Deus Ex Machina - {{ title }} </title>
     {% else %}
     <title> Deus Ex Machina</title>
     {% endif %}
+
 </head>
 
 <body>
@@ -27,27 +29,19 @@
 
     <div class="row">
         <div class="col-md-8 mh-100 verticalLine">
-            LABYRINTH VIEW
+            <div id="labyrinth-wrapper">
+                {% include "./labyrinth.html" %}
+            </div>
+            <div id="controls-wrapper">
+                {% include "./controls.html" %}
+            </div>
         </div>
         <div class="col-md-4">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="code-tab" data-toggle="tab" href="#code" role="tab" aria-controls="code">Code</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="help-tab" data-toggle="tab" href="#help" role="tab" aria-controls="Help">Help</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade" id="code" role="tabpanel" aria-labelledby="code-tab">
-                    CODE PAGE VIEW
-                </div>
-                <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">
-                    <h5>API</h5>
-                    {% for api in apiKey %}
-                    <span class="badge badge-secondary">{{api.method}}</span>: &nbsp; {{ api.description }} <br> {% endfor
-                    %}
-                </div>
+            <div id="tabs-wrapper">
+                {% include "./tabs.html" %}
+            </div>
+            <div id="console-output-wrapper">
+                {% include "./console-output.html" %}
             </div>
         </div>
     </div>
