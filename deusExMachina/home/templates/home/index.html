@@ -13,6 +13,7 @@
 
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/controls.css' %}">
     
     {% if title %}
     <title> Deus Ex Machina - {{ title }} </title>
@@ -29,11 +30,11 @@
 
     <div class="row">
         <div class="col-md-8 mh-100 verticalLine">
-            <div id="labyrinth-wrapper">
-                {% include "./labyrinth.html" %}
-            </div>
             <div id="controls-wrapper">
                 {% include "./controls.html" %}
+            </div>
+            <div id="labyrinth-wrapper">
+                {% include "./labyrinth.html" %}
             </div>
         </div>
         <div class="col-md-4">
