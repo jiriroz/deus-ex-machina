@@ -1,0 +1,7 @@
+.row { 
+    padding-top: 3rem !important; 
+}
+.verticalLine {
+    border-right: 0.1px solid gray;
+    padding-left: 3rem;
+}
