@@ -22,12 +22,27 @@ apiKey = [
         'method': 'moveBack()',
         'description': 'Moves robot to the back',
         'example': 'example'
-    },
+    }
+]
+
+boilerPlate = [
+    {
+        'start': 'def main(): \n',
+        'end': 'if __name__ == \"__main__\":\n main() \n'
+    }
+]
+
+consoleMessage = [
+    {
+        'message': 'Hello World!'
+    }
 ]
 
 def index(request):
     context = {
         'apiKey': apiKey,
-        'title': ''
+        'boilerPlate': boilerPlate,
+        'consoleMessage': consoleMessage,
+        'title': 'Level 1'
     }
     return render(request, 'home/index.html', context)
