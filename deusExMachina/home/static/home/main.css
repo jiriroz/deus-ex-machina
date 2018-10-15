@@ -1,7 +1,52 @@
-.row { 
+/* Heading and Paragraph Elements */
+p {
+    margin: 0; 
+}
+
+html,body {
+    height: 100%;
+}
+
+/*  */
+#contentPadding { 
     padding-top: 3rem !important; 
 }
-.verticalLine {
-    border-right: 0.1px solid gray;
-    padding-left: 3rem;
+
+/* Controls */
+.btn-outline-success, .btn-outline-dark {
+    border: 0;
+}
+
+/* Labyrinth */
+.main {
+    padding-left: 2rem;
+}
+
+/* Tabs */
+.tab-content, .tab-pane, #console-output-wrapper {
+    height: 97%;
+    padding: 0.5rem;
+}
+#tabs-wrapper {
+    width: 95%;
+    height: 100%;
+}
+.code {
+    padding-left: 4em;
+}
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+#code, .card {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #B5B5B5;
+}
+.ide {
+    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-size: 12px;
+}
+
+/* Console */
+#console-output-wrapper { 
+    width: 95%;
 }

@@ -1,2 +1,8 @@
-Console output will be here
-<textarea id="console-output" rows="3"></textarea>
+<div class="card">
+    <div class="card-body ide">
+        <u>Console</u> <br>
+        {% for print in consoleMessage %}
+            {{ print.message }}
+        {% endfor consoleMessage %}
+    </div>
+</div>

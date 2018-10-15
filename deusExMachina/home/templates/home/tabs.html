@@ -1,4 +1,3 @@
-
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
         <a class="nav-link active" id="code-tab" data-toggle="tab" href="#code" role="tab" aria-controls="code">Code</a>
@@ -8,13 +7,20 @@
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="code" role="tabpanel" aria-labelledby="code-tab">
-        <textarea id="code-input" rows="12"></textarea>
+    <div class="tab-pane fade show active ide" id="code" role="tabpanel" aria-labelledby="code-tab">
+        {% for code in boilerPlate %} {{code.start | linebreaks}}
+            <div class="code" id="code-input" contenteditable="true">
+                # Code goes over here. <br> 
+                print("Hello World!")
+            </div>
+            <br> {{code.end | linebreaks}} 
+        {% endfor boilerPlate %}
     </div>
     <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">
         <h5>API</h5>
         {% for api in apiKey %}
-        <span class="badge badge-secondary">{{api.method}}</span>: &nbsp; {{ api.description }} <br>
-        {% endfor %}
+            <span class="badge badge-secondary">{{api.method}}</span>: &nbsp; 
+            {{ api.description }} <br> 
+        {% endfor apiKey %}
     </div>
 </div>

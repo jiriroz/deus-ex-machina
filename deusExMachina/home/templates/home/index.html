@@ -16,9 +16,10 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/controls.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'home/controls.css' %}">
 
-    <script src="{% static 'home/main.js' %}"></script>
-    
-    {% if title %}
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <script src="{% static 'home/main.js' %}"></script> {% if title %}
     <title> Deus Ex Machina - {{ title }} </title>
     {% else %}
     <title> Deus Ex Machina</title>
@@ -31,8 +32,8 @@
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/home">Deus Ex Machina</a>
     </nav>
 
-    <div class="row">
-        <div class="col-md-8 mh-100 verticalLine">
+    <div class="row h-100" id="contentPadding">
+        <div class="col-md-8 main">
             <div id="controls-wrapper">
                 {% include "./controls.html" %}
             </div>
@@ -40,13 +41,18 @@
                 {% include "./labyrinth.html" %}
             </div>
         </div>
-        <div class="col-md-4">
-            <div id="tabs-wrapper">
-                {% include "./tabs.html" %}
+        <div class="col-md-4 h-100">
+            <div class="row h-75">
+                <div id="tabs-wrapper">
+                    {% include "./tabs.html" %}
+                </div>
             </div>
-            <div id="console-output-wrapper">
-                {% include "./console-output.html" %}
+            <div class="row h-25">
+                <div id="console-output-wrapper">
+                    {% include "./console-output.html" %}
+                </div>
             </div>
+
         </div>
     </div>
 
