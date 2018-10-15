@@ -33,6 +33,7 @@ html,body {
 }
 .code {
     padding-left: 4em;
+    color: green;
 }
 [contenteditable]:focus {
     outline: 0px solid transparent;
